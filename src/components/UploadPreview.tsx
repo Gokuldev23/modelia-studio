@@ -41,7 +41,7 @@ export default function UploadPreview({currentImage,onImageReady}:Props) {
                 role="region"
                 aria-live="polite"
                 aria-label="Image preview"
-                className="w-full h-64 border rounded-xl shadow shadow-slate-700 flex items-center justify-center overflow-hidden bg-gray-100"
+                className="h-48 aspect-video  border rounded-xl shadow shadow-slate-700 flex items-center justify-center overflow-hidden bg-slate-800"
             >
                 {currentImage ? (
                     <img src={currentImage} alt="Preview" className="object-contain max-h-full" />
