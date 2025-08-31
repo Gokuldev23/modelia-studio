@@ -1,0 +1,1 @@
+export type StyleOption = "Editorial" | "Streetwear" | "Vintage";
