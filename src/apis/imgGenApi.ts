@@ -24,7 +24,7 @@ export async function imageGenApi(req: Payload): Promise<Generation> {
 
   await delay(1000 + Math.floor(Math.random() * 1000));
 
-  if (Math.random() < 0.5) {
+  if (Math.random() < 0.2) {   // 20% of Time Failure - Increase to see the effect often 
     console.log("Error in Randomness");
     throw new Error("Model overloaded");
   }
