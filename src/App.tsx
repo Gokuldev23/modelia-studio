@@ -58,6 +58,10 @@ function App() {
       alert('Upload an image first');
       return;
     }
+    if(!promptForm.prompt) {
+      alert("Prompt is Empty")
+      return;
+    }
     try {
       const gen = await generate({ imageDataUrl, prompt:promptForm.prompt, style:promptForm.style });
       setCurrentGeneration(gen);
@@ -74,11 +78,11 @@ function App() {
   };
 
   return (
-    <div className="max-w-4xl mx-auto lg:py-10 md:py-5 py-3">
+    <div className="max-w-4xl mx-auto lg:py-10 md:py-5 py-3 px-4">
       <header>
-        <h1 className="text-2xl font-bold">Modelia — Mini AI Studio (Mock)</h1>
+        <h1 className="text-2xl font-bold">Modelia — AI (Mock)</h1>
       </header>
-      <main className="grid grid-cols-[auto_250px] gap-8">
+      <main className="grid lg:grid-cols-[auto_250px] gap-8 relative">
         <div>
           <UploadPreview onImageReady={setImageDataUrl} currentImage={imageDataUrl} />
           <PromptStyleForm

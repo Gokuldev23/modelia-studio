@@ -16,12 +16,12 @@ export default function PromptStyleForm({ prompt, setPrompt, style, setStyle }: 
 
 
     return (
-        <div className="space-y-2 my-4">
+        <form className="space-y-2 my-4">
             <label className="block">
                 <span className="text-sm font-medium">Prompt</span>
                 <input
                     value={prompt}
-                    onChange={(e) => setPrompt(e.target.value)}
+                    onChange={(e) => setPrompt(e.target.value)}  // Todo validationn
                     placeholder="Describe the look (e.g., 'red silk top with moody lighting')"
                     className="mt-1 w-full rounded border px-3 py-2"
                     aria-label="Prompt"
@@ -52,6 +52,6 @@ export default function PromptStyleForm({ prompt, setPrompt, style, setStyle }: 
                 <div className="text-sm font-medium">{prompt || 'No prompt'}</div>
                 <div className="text-xs text-gray-600">{style}</div>
             </div>
-        </div>
+        </form>
     )
 }
