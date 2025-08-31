@@ -25,7 +25,7 @@ export default function UploadPreview({currentImage,onImageReady}:Props) {
 
     return (
         <div className="space-y-2">
-            <label className="block w-fit border rounded-2xl px-4 py-1 my-4">
+            <label className="block w-fit rounded-2xl my-4">
                 <span className="sr-only">Upload image</span>
                 <input
                     ref={fileRef}
@@ -33,7 +33,7 @@ export default function UploadPreview({currentImage,onImageReady}:Props) {
                     type="file"
                     accept="image/png, image/jpeg"
                     onChange={handleFile}
-                    className="focus:outline-none"
+                    className="focus:outline-2 focus:outline-amber-500 border px-4 py-1 rounded-2xl"
                 />
             </label>
 
